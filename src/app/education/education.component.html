@@ -1,0 +1,23 @@
+<p>{{title}}</p>
+
+<div *ngFor="let movie of movies">
+     <p>{{movie.title}}</p>
+</div>
+<div>
+<select [(ngModel)]="selectedValue">  
+    <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>  
+</select>  
+<div class='row' [ngSwitch]="selectedValue">  
+    <div *ngSwitchCase="'One'">One is Pressed</div>  
+    <div *ngSwitchCase="'Two'">Two is Selected</div>  
+    <div *ngSwitchDefault>Default Option</div>  
+</div> 
+<input type="text" [(ngModel)]="t1"/>
+<input type="text" [(ngModel)]="t2"/>
+{{t1+t2}}
+</div> 
+<div>
+    <div (click)="onDivClick()">    
+        <button (click)="onSave($event)">Save</button>  <!-- Event Binding -->    
+      </div>  
+</div>

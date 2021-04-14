@@ -1,0 +1,41 @@
+<h1>Welcome1</h1>
+<div class="play-container">
+    <p>You'v clicked <span (click)="countClick()">Add</span> {{clcikcounter}}
+      <span (click)="menuscount()">Remove</span> </p>
+
+</div>
+
+<div class="play-container">
+  <p>
+      <input type="text" [(ngModel)]="name">
+     <br>
+      <strong>You said :</strong>{{name}}
+  </p>
+</div>
+
+<div >
+
+
+<ul class="courses">
+  <li *ngFor="let course of courses"  
+  [class.selected]="course == selectedCourse"
+  (click)="onSelect(course)">
+  <span>{{course.id}}</span> 
+{{course.name}}
+  </li>
+
+</ul>
+</div>
+<app-coursedetails [course]="selectedCourse"></app-coursedetails>
+<app-messages></app-messages>
+
+  <div class="play-container"  [ngClass]="setClasses()">
+    <ng-template [ngIf]=" clcikcounter > 4" [ngIfElse]="none">
+        <p>greater then 4</p>
+    </ng-template>
+
+    <ng-template #none>
+        <p>not greater then 4</p>
+    </ng-template>
+  </div>
+  
