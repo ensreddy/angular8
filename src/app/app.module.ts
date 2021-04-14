@@ -10,6 +10,7 @@ import {HttpClientModule}  from '@angular/common/http';
 import { CoursedetailsComponent } from './coursedetails/coursedetails.component';
 import { MessagesComponent } from './messages/messages.component';
 import { EducationComponent } from './education/education.component';
+import { MyclassComponent } from './myclass/myclass.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EducationComponent } from './education/education.component';
     SignComponent,
     CoursedetailsComponent,
     MessagesComponent,
-    EducationComponent
+    EducationComponent,
+    MyclassComponent
   ],
   imports: [
     BrowserModule,
