@@ -15,6 +15,10 @@ export class EducationComponent implements OnInit {
   }
   title: string ="Top 10 Movies" ;  
 
+
+
+
+  
 movies:Movies[]=[
   {title:'Zootopia',director:'Byron Howard, Rich Moore',cast:'Idris Elba, Ginnifer Goodwin, Jason Bateman',releaseDate:'March 4, 2016'},  
   {title:'Batman v Superman: Dawn of Justice',director:'Zack Snyder',cast:'Ben Affleck, Henry Cavill, Amy Adams',releaseDate:'March 25, 2016'},  
